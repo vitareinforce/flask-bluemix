@@ -29,7 +29,7 @@ def WelcomeToMyapp():
 def GetPeople():
     list = [
         {'name': 'Vitradisa Pratama', 'age': 25},
-        {'name': 'Ridwan Suhud', 'val': 25}
+        {'name': 'Ridwan Suhud', 'age': 25}
     ]
     return jsonify(results=list)
 
