@@ -28,8 +28,8 @@ def WelcomeToMyapp():
 @app.route('/api/people')
 def GetPeople():
     list = [
-        {'name': 'John', 'age': 28},
-        {'name': 'Bill', 'val': 26}
+        {'name': 'Vitradisa Pratama', 'age': 25},
+        {'name': 'Ridwan Suhud', 'val': 25}
     ]
     return jsonify(results=list)
 
@@ -39,6 +39,14 @@ def SayHello(name):
         'message': 'Hello ' + name
     }
     return jsonify(results=message)
+
+@app.route('/api/temp/<suhu>')
+def UkurSuhu(name):
+    message = {
+        'message': 'Suhu input : ' + suhu
+    }
+    return jsonify(results=message)
+
 
 port = os.getenv('PORT', '5000')
 if __name__ == "__main__":
