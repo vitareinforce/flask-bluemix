@@ -41,7 +41,7 @@ def SayHello(name):
     return jsonify(results=message)
 
 @app.route('/api/temp/<suhu>')
-def UkurSuhu(name):
+def UkurSuhu(suhu):
     message = {
         'message': 'Suhu input : ' + suhu
     }
