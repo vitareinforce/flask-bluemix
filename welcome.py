@@ -42,10 +42,10 @@ def SayHello(name):
 
 @app.route('/api/temp/<suhu>')
 def UkurSuhu(suhu):
-    message = {
+    suhu_akhir = {
         'message': 'Suhu input : ' + suhu
     }
-    return jsonify(results=message)
+    return jsonify(results=suhu_akhir)
 
 
 port = os.getenv('PORT', '5000')
