@@ -30,8 +30,8 @@ def WelcomeToMyapp():
 @app.route('/api/people', methods = ['GET'])
 def GetPeople():
     list_data = [
-        {'name': 'Vitradisa Pratama', 'age': 25},
-        {'name': 'Ridwan Suhud', 'age': 25}
+        {'name': 'Vitradisa Pratama', 'nim': '23215331'},
+        {'name': 'Ridwan Suhud', 'nim': '23215343'}
     ]
     json_data = json.dumps(list_data)
     resp = Response(json_data, status=200, mimetype="application/json")
