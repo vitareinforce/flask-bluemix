@@ -13,9 +13,11 @@
 # limitations under the License.
 
 import os
-from flask import Flask, jsonify
+from flask import Flask, jsonify, Response, json
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/')
 def Welcome():
@@ -25,13 +27,15 @@ def Welcome():
 def WelcomeToMyapp():
     return 'Welcome again to my app running on Bluemix!'
 
-@app.route('/api/people')
+@app.route('/api/people', methods = ['GET'])
 def GetPeople():
-    list = [
+    list_data = [
         {'name': 'Vitradisa Pratama', 'age': 25},
         {'name': 'Ridwan Suhud', 'age': 25}
     ]
-    return jsonify(results=list)
+    json_data = json.dumps(list_data)
+    resp = Response(json_data, status=200, mimetype="application/json")
+    return resp
 
 @app.route('/api/people/<name>')
 def SayHello(name):
