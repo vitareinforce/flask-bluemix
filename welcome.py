@@ -13,12 +13,12 @@
 # limitations under the License.
 
 import os
-from flask import Flask, jsonify, Response, json, blueprint
+from flask import Flask, jsonify, Response, json
 from flask_cors import CORS, cross_origin
-from flightdata import flight_data
+from flightdata import flightdata
 
 app = Flask(__name__)
-app.register_blueprint(flight_data)
+app.register_blueprint(flightdata)
 CORS(app)
 
 @app.route('/')
