@@ -3669,7 +3669,6 @@ def ShowAll():
             "isActive":false
         }
     ]
-    
-    json_data = json.dumps(list_data)
+    json_data = json.dumps(data)
     resp = Response(json_data, status=200, mimetype="application/json")
     return resp
