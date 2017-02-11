@@ -15,8 +15,10 @@
 import os
 from flask import Flask, jsonify, Response, json
 from flask_cors import CORS, cross_origin
+from flight_data import flight_data
 
 app = Flask(__name__)
+app.register_blueprint(flight_data)
 CORS(app)
 
 @app.route('/')
