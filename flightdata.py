@@ -4,8 +4,8 @@ from flask_cors import CORS, cross_origin
 
 flightdata = Blueprint('flightdata', __name__)
 
-@flight_data.route('/flightdata/all')
-def showall():
+@flightdata.route('/flightdata/all')
+def ShowAll():
     data = [
         {
             "id":"4739590",
