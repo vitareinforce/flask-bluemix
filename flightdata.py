@@ -2,7 +2,7 @@ import os
 from flask import blueprint, Flask, jsonify, Response, json
 from flask_cors import CORS, cross_origin
 
-flight_data = Blueprint('flight_data', __name__)
+flightdata = Blueprint('flightdata', __name__)
 
 @flight_data.route('/flightdata/all')
 def showall():
