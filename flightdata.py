@@ -1,5 +1,5 @@
 import os
-from flask import Flask, jsonify, Response, json
+from flask import blueprint, Flask, jsonify, Response, json
 from flask_cors import CORS, cross_origin
 
 flight_data = Blueprint('flight_data', __name__)
