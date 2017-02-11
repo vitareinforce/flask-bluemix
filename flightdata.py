@@ -6,7 +6,7 @@ flight_data = Blueprint('flight_data', __name__)
 
 @flight_data.route('/flightdata/all')
 def showall():
-  data = [
+    data = [
         {
             "id":"4739590",
             "flightNr":"KLM1302",
