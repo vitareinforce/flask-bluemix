@@ -4,9 +4,9 @@ from flask_cors import CORS, cross_origin
 
 flightdata = Blueprint('flightdata', __name__)
 
-@flightdata.route('/flightdata/all', methods = ['GET'])
+@flightdata.route('/fd', methods = ['GET'])
 def ShowAll():
-    flight_data = [
+    fdata = [
         {
             "id":"4739590",
             "flightNr":"KLM1302",
@@ -3669,6 +3669,6 @@ def ShowAll():
             "isActive":false
         }
     ]
-    json_data = json.dumps(flight_data)
+    json_data = json.dumps(fdata)
     resp = Response(json_data, status=200, mimetype="application/json")
     return resp
